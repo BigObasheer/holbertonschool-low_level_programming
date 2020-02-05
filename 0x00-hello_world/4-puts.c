@@ -1,3 +1,4 @@
+/* A C program that uses puts */
 #include <stdio.h>
 /**
  * main - Entry point
