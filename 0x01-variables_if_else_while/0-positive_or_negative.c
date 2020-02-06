@@ -1,8 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 /* Determine if function is positive, zero, or negative */
-
-/*
+/**
  * main - Entry Point
  *
  * Return: Always 0 (Sucess)
