@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- *main - single digit number combos
+ *main - Entry Point
  *
- *Return: All possible number combos
+ *Return: 0
  */
 
 int main(void)
