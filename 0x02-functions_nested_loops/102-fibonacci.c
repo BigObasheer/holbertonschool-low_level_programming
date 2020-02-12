@@ -23,6 +23,7 @@ int main(void)
 			j = k;
 			k = l;
 		}
+		else
 		printf("%ld\n", j);
 	}
 	return (0);
