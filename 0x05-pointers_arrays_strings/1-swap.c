@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * swap_int - a function that swaps the values of two integers
+ * @a: first integer
+ * @b: seconf integer
+ * Return: void
  */
 
 void swap_int(int *a, int *b)
