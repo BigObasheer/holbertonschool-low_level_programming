@@ -10,12 +10,18 @@ void puts2(char *str)
 {
 	int i;
 
-	for (i = 0; i < (_strlen(str) - 1); i+=2)
+	for (i = 0; i < (_strlen(str) - 1); i += 2)
 	{
 		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
+
+/**
+ * _strlen - returns the length of a string.
+ * @s: string
+ * Return: void
+ */
 
 int _strlen(char *s)
 {
