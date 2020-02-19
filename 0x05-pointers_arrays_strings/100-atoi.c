@@ -2,30 +2,36 @@
 #incude <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _atoi - function that convert a string to an integer
+ * @s: string
+ * Return: int
  */
 
 int _atoi(char *s)
 {
-	if (*s == '\0')
-		return (0);
+	int num, neg, i;
 
-	int res = 0;
-	int sign = 1;
-	int i = 0;
-
-	if (s[0] == '-')
+	neg = 1;
+	i = num = 0;
+	while ((s[i] < '0' || s[i] > '9') && s[i] != 0)
 	{
-		sign = -1;
+		if (s[i] == '-')
+			neg = neg * -1;
 		i++;
 	}
-	for (; s[i] != '\0'; ++i)
+	while ((s[i] >= '0' && s[i] <= '9') && s[i] != 0)
 	{
-		if (isNumericChar(s[i]) == false)
-			return 0;
-		res = res * 10 + s[i] - '0';
+		if (num >= 0)
+		{
+			num = num * 10 - (s[i] - '0');
+			i++;
+		}
+		else
+		{
+			num = num * 10 - (s[i] - '0');
+			i++;
+		}
 	}
-	return (sign * res);
+	neg = neg * -1;
+	return (num * neg);
 }
