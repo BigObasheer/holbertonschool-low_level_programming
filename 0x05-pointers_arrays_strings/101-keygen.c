@@ -15,7 +15,7 @@ int main(void)
 	int c;
 	int i = 0;
 
-	while (sum < 2646)
+	while (b < 2646)
 	{
 		srand(time(NULL));
 		b = (rand() % 96 + 32);
