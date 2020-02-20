@@ -4,7 +4,7 @@
  * _strcat - concatenates two strings
  * @dest: string 1
  * @src: string 2
- *
+ * @n: bytes from src
  * Return: combined two strings
  */
 
@@ -21,6 +21,5 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		d1[i] = s1[j];
 	}
-	/*d1[i] = ('\0');*/
 	return (d1);
 }
