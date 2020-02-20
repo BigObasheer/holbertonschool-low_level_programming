@@ -1,10 +1,12 @@
 #include "holberton.h"
+
 /**
  * leet - function that encodes a string into 1337
  * @s: string
  *
  * Return: encoded leet string
  */
+
 char *leet(char *s)
 {
 	char letters[] = "aAeEoOtTlL";
