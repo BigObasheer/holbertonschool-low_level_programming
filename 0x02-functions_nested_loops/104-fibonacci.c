@@ -1,41 +1,46 @@
-#include <stdio.h>
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * main - Fibonacci numbers
+ * main - prints the first 98 Fibonacci numbers
  *
- * Return: void
+ * Return: 0
  */
 
 int main(void)
 {
-	long int i, a, a1, a2, b, b1, b2, c, c1, c2;
+	unsigned long int i, h1, h2, hs, t1, t2, ts, o1, o2, os;
 
-	a = 1;
-	b = 2;
-	a1 = a / 1000000;
-	a2 = a % 1000000;
-	b1 = b / 1000000;
-	b2 = b % 1000000;
-
+	h1 = h2 = hs = t1 = ts = t2 = os = 0;
+	o1 = 1;
+	o2 = 2;
 	for (i = 0; i < 98; i++)
 	{
-		if (i < 85)
-		{
-			printf("%ld, ", a);
-			c = a + b;
-			a = b;
-			b = c;
-		}
-		else if (i >= 85 && i < 97)
-		{
-			c1 = c / 1000000;
-			c2 = c % 1000000;
-		}
+		if (i != 0)
+			printf(", ");
+		if (h1)
+			printf("%lu%07lu%07lu", h1, t1, o1);
+		else if (t1)
+			printf("%lu%07lu", t1, o1);
 		else
-		{
-			printf("%ld%ld\n", a1, a2);
-		}
+			printf("%lu", o1);
+		hs = h1 + h2;
+		ts = t1 + t2;
+		hs = hs + ((ts / 10000000) % 10000000);
+		ts = ts % 10000000;
+		os = o1 + o2;
+		ts = ts + ((os / 10000000) % 10000000);
+		hs = hs + ((ts / 10000000) % 10000000);
+		hs = hs % 10000000;
+		ts = ts % 10000000;
+		os = os % 10000000;
+		o1 = o2;
+		t1 = t2;
+		h1 = h2;
+		o2 = os;
+		t2 = ts;
+		h2 = hs;
 	}
+	printf("\n");
 	return (0);
 }
