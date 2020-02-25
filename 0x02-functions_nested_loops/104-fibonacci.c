@@ -6,6 +6,7 @@
  *
  * Return: void
  */
+
 int main(void)
 {
 	long int i, a, a1, a2, b, b1, b2, c, c1, c2;
