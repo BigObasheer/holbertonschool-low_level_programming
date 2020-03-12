@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <strings.h>
 
 /**
  * main - prints its own opcode
@@ -16,8 +16,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
-
-
 	bytes = atoi(argv[1]);
 
 	if (bytes < 0)
