@@ -3,9 +3,9 @@
 #include <stdarg.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * sum_them_all -  function that returns the sum of all its parameters
+ * @n: number of parameters
+ * Return: function that returns the sum of all its parameters
  */
 
 int sum_them_all(const unsigned int n, ...)
