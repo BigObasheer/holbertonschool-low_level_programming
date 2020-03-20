@@ -2,18 +2,18 @@
 
 /**
  * free_list - frees list_t
- * @head: linked list , list_t
+ * @head: first node
  */
 
 void free_list(list_t *head)
 {
-	list_t *hold;
+	list_t *holder;
 
 	while (head != NULL)
 	{
-		hold = head;
+		holder = head;
 		head = head->next;
-		free(hold->str);
-		free(hold);
+		free(holder->str);
+		free(holder);
 	}
 }
