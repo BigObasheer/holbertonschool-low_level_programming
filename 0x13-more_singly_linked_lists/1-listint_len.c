@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- * list_len - returns the number of elements in a linked list_t list
- * @h: struct list_t, first node
+ * list_listint - returns the number of  elements of a listint_t
+ * @h: first node
  * Return: number of nodes
  */
 
-size_t list_len(const list_t *h)
+listint_len(const listint_t *h)
 {
 	int i;
 
