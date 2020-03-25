@@ -13,7 +13,6 @@ int sum_listint(listint_t *head)
 	for (sum = 0; head; head = head->next)
 	{
     		sum += head->n;
-
 	}
 	return (sum);
 }
