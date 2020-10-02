@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_get - return vale of node
+ * hash_table_get - return value of node
  * @ht: hashtable
  * @key: key
  * Return: value of the key
@@ -9,14 +9,13 @@
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int index = key_index((const unsigned char *)key, ht->size);
-	char *value = NULL;
+	hash_node_t *node;
 
-	if ((!ht) || (!key))
-		return(NULL);
-	if (strcmp(ht->array[index]->key, (char *)key) == 0)
-	{
-		value = ht->array[index]->value;
-	}
-	return(value);
+	if (!ht)
+		return (NULL);
+	node = ht->array[key_index((const unsigned char *)key, ht->size)];
+	for (; node; node = node->next)
+		if (strcmp(node->key, key) == 0)
+			return (node->value);
+	return (NULL);
 }
